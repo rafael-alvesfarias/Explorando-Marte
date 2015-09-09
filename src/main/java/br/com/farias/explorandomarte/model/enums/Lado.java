@@ -1,6 +1,6 @@
-package br.com.farias.explorandomarte.model;
+package br.com.farias.explorandomarte.model.enums;
 
-enum Lado {
+public enum Lado {
 	E, //Esquerda
 	D;  //Direita
 	public Lado fromChar(char lado) {
@@ -11,7 +11,7 @@ enum Lado {
 		case 'd': return D;
 
 		default:
-			throw new IllegalArgumentException("Par‚metro lado inv·lido: " + lado);
+			throw new IllegalArgumentException("Par√¢metro lado inv√°lido: " + lado);
 		}
 	}
 }

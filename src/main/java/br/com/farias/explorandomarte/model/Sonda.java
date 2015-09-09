@@ -1,31 +1,33 @@
 package br.com.farias.explorandomarte.model;
 
+import br.com.farias.explorandomarte.model.enums.Lado;
+
 public class Sonda {
 	
 	private int posicaoX;
 	
 	private int posicaoY;
 	
-	private Direcao direcao;
+	private DirecaoRosaDosVentos direcao;
 	
-	public Sonda(int posicaoX, int posicaoY, Direcao direcao) {
+	public Sonda(int posicaoX, int posicaoY, DirecaoRosaDosVentos direcao) {
 		this.posicaoX = posicaoX;
 		this.posicaoY = posicaoY;
 		this.direcao = direcao;
 	}
 	
 	public void mover() {
-		posicaoX = 1 * direcao.getFatorX();
-		posicaoY = 1 * direcao.getFatorY();
+		posicaoX = (int) (1 * direcao.getFatorX());
+		posicaoY = (int) (1 * direcao.getFatorY());
 	}
 	
 	public void girar(Lado lado) {
-		if (lado.equals(lado.D)){
+		if (lado.equals(Lado.D)){
 			//girar para Direita
-			direcao = direcao.proximo();
+			direcao.proxima();
 		} else {
 			//girar para Esquerda
-			direcao = direcao.anterior();
+			direcao.anterior();
 		}
 	}
 	
