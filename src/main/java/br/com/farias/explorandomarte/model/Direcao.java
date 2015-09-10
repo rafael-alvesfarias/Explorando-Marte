@@ -11,8 +11,8 @@ public class Direcao {
 			throw new RuntimeException("O parâmetro ângulo é inválido: " + angulo);
 		}
 		this.angulo = angulo;
-		this.fatorX = Math.cos(angulo);
-		this.fatorY = Math.sin(angulo);
+		this.fatorX = Math.cos(Math.toRadians(angulo));
+		this.fatorY = Math.sin(Math.toRadians(angulo));
 	}
 	
 	public void girar(int graus) {
@@ -21,8 +21,8 @@ public class Direcao {
 			throw new RuntimeException("O parâmetro graus é maior que o permitido: " + graus);
 		}
 		this.angulo = novoAngulo;
-		this.fatorX = Math.cos(novoAngulo);
-		this.fatorY = Math.sin(novoAngulo);
+		this.fatorX = Math.cos(Math.toRadians(novoAngulo));
+		this.fatorY = Math.sin(Math.toRadians(novoAngulo));
 	}
 	
 	public double getFatorX() {

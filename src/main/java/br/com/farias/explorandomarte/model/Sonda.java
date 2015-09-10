@@ -17,12 +17,12 @@ public class Sonda {
 	}
 	
 	public void mover() {
-		posicaoX = (int) (1 * direcao.getFatorX());
-		posicaoY = (int) (1 * direcao.getFatorY());
+		posicaoX += (int) (1 * direcao.getFatorX());
+		posicaoY += (int) (1 * direcao.getFatorY());
 	}
 	
 	public void girar(Lado lado) {
-		if (lado.equals(Lado.D)){
+		if (lado.equals(Lado.R)){
 			//girar para Direita
 			direcao.proxima();
 		} else {
@@ -37,6 +37,37 @@ public class Sonda {
 	
 	public int getPosicaoY() {
 		return posicaoY;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + posicaoX;
+		result = prime * result + posicaoY;
+		return result;
+	}
+
+	//Considera iguais duas sondas com a mesma posição X e Y
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Sonda other = (Sonda) obj;
+		if (posicaoX != other.posicaoX)
+			return false;
+		if (posicaoY != other.posicaoY)
+			return false;
+		return true;
+	}
+	
+	@Override
+	public String toString() {
+		return posicaoX + " " + posicaoY + " " + direcao;
 	}
 	
 }
