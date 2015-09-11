@@ -30,7 +30,7 @@ public class Main {
 			while (!comando.equals("exit")) {
 				processador.executar(comando);
 				
-				System.out.println("Digite os comandos para movintar a sonda: ");
+				System.out.println("Digite os comandos para movimentar a sonda: ");
 				comando = scanner.nextLine();
 				
 				processador.executar(comando);
