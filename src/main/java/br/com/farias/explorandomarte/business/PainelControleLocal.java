@@ -1,5 +1,7 @@
 package br.com.farias.explorandomarte.business;
 
+import java.util.Set;
+
 import br.com.farias.explorandomarte.model.DirecaoRosaDosVentos;
 import br.com.farias.explorandomarte.model.Planalto;
 import br.com.farias.explorandomarte.model.Sonda;
@@ -45,12 +47,8 @@ public class PainelControleLocal implements PainelControle {
 	}
 
 	@Override
-	public String listarSondas() {
-		StringBuilder sb = new StringBuilder();
-		for(Sonda s : planalto.getSondas()) {
-			sb.append(s);
-		}
-		return sb.toString();
+	public Set<Sonda> listarSondas() {
+		return planalto.getSondas();
 	}
 
 }

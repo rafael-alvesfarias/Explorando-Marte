@@ -1,7 +1,9 @@
 package br.com.farias.explorandomarte.view.console;
 
 import java.util.Scanner;
+import java.util.Set;
 
+import br.com.farias.explorandomarte.model.Sonda;
 import br.com.farias.explorandomarte.view.console.commands.ComandoNaoPermitidoException;
 import br.com.farias.explorandomarte.view.console.commands.ProcessadorComandos;
 
@@ -39,8 +41,16 @@ public class Main {
 				comando = scanner.nextLine();
 			}
 			
+			@SuppressWarnings("unchecked")
+			Set<Sonda> sondas = (Set<Sonda>) processador.executar("listar");
+			
+			StringBuilder sb = new StringBuilder();
+			for(Sonda s : sondas) {
+				sb.append(s);
+			}
+			
 			//Resultado final
-			System.out.println(processador.executar("listar"));
+			System.out.println(sb);
 			
 		} catch(ComandoNaoPermitidoException e) {
 			

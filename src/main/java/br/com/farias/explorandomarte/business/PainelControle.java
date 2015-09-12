@@ -1,5 +1,9 @@
 package br.com.farias.explorandomarte.business;
 
+import java.util.Set;
+
+import br.com.farias.explorandomarte.model.Sonda;
+
 /**
  * Interface padrão para controle das Sondas
  * @author Rafael A. Farias
@@ -13,5 +17,5 @@ public interface PainelControle {
 	
 	public void controlarSonda(String comandos);
 	
-	public String listarSondas();
+	public Set<Sonda> listarSondas();
 }

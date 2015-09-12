@@ -29,6 +29,15 @@ public class DirecaoRosaDosVentos extends Direcao {
 			default: throw new IllegalArgumentException("Parãmetro direção inválido: " + direcao);
 		}
 	}
+	
+	/**
+	 * Fábrica estática de direções de uma rosa dos ventos (N, E, S, W)
+	 * @param direcao 'N', 'E', 'S', 'W'
+	 * @return
+	 */
+	public static DirecaoRosaDosVentos fromString(String direcao) {
+		return fromChar(direcao.charAt(0));
+	}
 
 	//Norte
 	public static final DirecaoRosaDosVentos N = new DirecaoRosaDosVentos(90);
