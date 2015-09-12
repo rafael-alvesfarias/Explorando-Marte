@@ -1,4 +1,4 @@
-package br.com.farias.explorandomarte.view.console.commands;
+package br.com.farias.explorandomarte.client.view.console.commands;
 
 public abstract class Comando {
 		

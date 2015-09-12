@@ -1,0 +1,16 @@
+------Explorando Marte------
+Digite os comandos solicitados ou sair para interromper a execução.
+Digite o ponto x e y superior direito do planalto: 
+5 5
+Digite o ponto x e y da sonda que deseja movimentar: 
+1 2 N
+Digite os comandos para movimentar a sonda: 
+LMLMLMLMM
+Digite o ponto x e y da sonda que deseja movimentar: 
+3 3 E
+Digite os comandos para movimentar a sonda: 
+MMRMMRMRRM
+Digite o ponto x e y da sonda que deseja movimentar: 
+sair
+1 3 N
+5 1 E
