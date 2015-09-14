@@ -13,8 +13,6 @@ import java.util.Set;
  */
 public class ProcessadorComandos {
 	
-	
-	
 	private Map<String, Comando> comandos = new HashMap<String, Comando>();
 	private Set<String> comandosPermitidos = new HashSet<String>();
 	

@@ -59,9 +59,7 @@ public class Main {
 				System.out.println(s);
 			}			
 			
-		} catch (ComandoNaoPermitidoException e) {
-			System.out.println(e.getMessage());
-		} catch(ServiceException e){
+		} catch (ComandoNaoPermitidoException | ServiceException e) {
 			System.out.println(e.getMessage());
 		}finally {
 			scanner.close();
