@@ -31,7 +31,7 @@ public class ExplorandoMarteServiceWS implements ExplorandoMarteService {
 				.post(ClientResponse.class);
 		
 		if(response.getStatus() != 200) {
-			throw new ServiceException("Erro ao definir o planalto.");
+			throw new ServiceException(response.getEntity(String.class));
 		}
 	}
 
@@ -45,7 +45,7 @@ public class ExplorandoMarteServiceWS implements ExplorandoMarteService {
 				.post(ClientResponse.class);
 		
 		if(response.getStatus() != 200) {
-			throw new ServiceException("Erro no controle da sonda.");
+			throw new ServiceException(response.getEntity(String.class));
 		}
 	}
 
